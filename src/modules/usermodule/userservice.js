@@ -1,13 +1,15 @@
 
 import {OAuth2Client} from'google-auth-library';
-import { create, find } from "../../db/db.service.js"
+import { create, find, findbyid } from "../../db/db.service.js"
 import { usermodel } from "../../db/models/usermodel.js"
-import { Encrypt } from "../../security/encryption.js"
+import { Decrypt, Encrypt } from "../../security/encryption.js"
 import { Comparee, Hash } from "../../security/hashing.js"
 import  jwt  from "jsonwebtoken"
+import multer from 'multer';
+
 export const signup=async (req,res,next)=>{
    try{
-     const {fname,lname,email,password,age,gender,phone}=req.body
+     const {fname,lname,email,password,age,gender,phone,roles}=req.body
    const emailExist= await find({
     model:usermodel,
     condition:{email}
@@ -19,8 +21,10 @@ export const signup=async (req,res,next)=>{
 
    const result = await create({
       model:usermodel,
-      data:{fname,lname,email,password:hashhpass,age,gender,phone:encryptedphone}
+      data:{fname,lname,email,roles,password:hashhpass,age,gender,phone:encryptedphone,profileimage:req.file.path}
    })
+   
+  
    res.status(201).json({message:"sign up done successfully"})
 }catch(err){
    res.status(404).json({message:err.message,stack:err.stack})
@@ -55,21 +59,17 @@ export const signin=async (req,res,next)=>{
 
 export const getprofile=async (req,res,next)=>{
    try{
-      const{token}=req.body
-      if (!token){
-         return res.status(400).json({message:"token not found"})
-      }
-      const decoder= jwt.verify(token,"roro2222")
-
-      const user=await find({
-         model:usermodel,
-         condition:{email:decoder.email,provider:"system"}
-      })
+     const user = req.user
+     const decrypted=Decrypt(user.phone)
+     res.status(200).json({"your profile":{ 
+      fname:user.fname,
+      lname:user.lname,
+      email:user.email,
+      phone:decrypted,
+      gender:user.gender,
+      age:user.age}
      
-      
-      if(!user){return res.status(400).json({message:"user not exist"})}
-      
-     res.status(200).json(user)
+     } )
    }catch(err){
     res.status(404).json({message:err.message,stack:err.stack})
    }
@@ -110,3 +110,25 @@ verify().catch(console.error);
     res.status(404).json({message:err.message,stack:err.stack})
    }
 }   
+
+
+
+export const Refresh_token= async(req,res,next)=>{
+   const {refresh_token}=req.headers
+  if(!refresh_token){
+      return res.status(401).json ({message:"token not exist"})
+     }
+     const decoded = jwt.verify(refresh_token,"roro4444")
+     if (!decoded?.id){return res.status(404).json({message:"invalid token"})}
+     const user = await findbyid({
+      model:usermodel,
+      id:decoded.id
+     })
+      if(!user){ return res.status(404).json ({message:"user not exist"})}
+       
+      const access_token =jwt.sign({id:user.id,email:user.email},"roro2222",{
+         expiresIn:120
+      })
+      res.status(200).json({access_token})
+
+}

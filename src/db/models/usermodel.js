@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 const userschema=new mongoose.Schema({
      fname:{
@@ -40,6 +41,11 @@ const userschema=new mongoose.Schema({
         type:String,
         enum:["male","female"],
         default:"male"
+    },
+    roles:{
+        type:String,
+        enum:["user","admin"],
+        default:"user"
     },
     phone:{
         type:String
