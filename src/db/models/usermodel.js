@@ -50,13 +50,19 @@ const userschema=new mongoose.Schema({
     phone:{
         type:String
     },
+    changeCardintialAT:Date,
     profileimage:String,
+    coverImages:[String],
     provider:{
         type:String,
         enum:["system","google"],
         default:"system"
     },
     isconfirmed:{
+        type:Boolean,
+        default:false
+    },
+    twoStepVerifiction:{
         type:Boolean,
         default:false
     }

@@ -1,12 +1,14 @@
 import express from "express"
-import { connectiondb } from "./db/connectiondb.js"
+import { connectiondb } from "./db/connection/connectiondb.js"
 import { userRouter } from "./modules/usermodule/usercontroller.js"
 import { usermodel } from "./db/models/usermodel.js"
 import cors from "cors"
+import { connectionRedis } from "./db/connection/connection.redis.js"
 const app = express()
 export const bootstrap =async()=>{
 
 await connectiondb()
+await connectionRedis()
 app.use(cors())
 app.use(express.json())
 
