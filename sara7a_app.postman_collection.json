@@ -1,0 +1,2813 @@
+{
+  "info": {
+    "_postman_id": "f62683d3-41f6-4af1-9d5a-90a6be06f2f6",
+    "name": "sara7a_app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57197167",
+    "_collection_link": "https://go.postman.co/collection/57197167-f62683d3-41f6-4af1-9d5a-90a6be06f2f6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "signup",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "images",
+                  "type": "file",
+                  "src": [
+                    "/D:/ER Diagram.jpg",
+                    "/D:/ER Diagram.jpg"
+                  ]
+                },
+                {
+                  "key": "fname",
+                  "value": "roqia",
+                  "type": "text"
+                },
+                {
+                  "key": "lname",
+                  "value": "saber",
+                  "type": "text"
+                },
+                {
+                  "key": "gender",
+                  "value": "male",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "rokasaber49@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "53848698984",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "22",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": " xuwdh74895",
+                  "type": "text"
+                },
+                {
+                  "key": "roles",
+                  "value": "user",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": [
+                    "/D:/ER Diagram.jpg"
+                  ]
+                },
+                {
+                  "key": "twoStepVerifiction",
+                  "value": "true",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{localHost}}/users/signup",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "signup",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"fname\":\"roqia\",\r\n    \"lname\":\"mahmoud\",\r\n    \"email\":\"roqia1@gmail.com\",\r\n    \"password\":\"bhkgi\",\r\n    \"age\":20,\r\n    \"gender\":\"female\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:3000/users/signup",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "39"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"27-tQPAUYM875Yr/jgTJ3GoBA8Gkbc\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 24 Sep 2026 18:33:19 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"sign up done successfully\"\n}"
+            },
+            {
+              "name": "signup",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"fname\":\"roqia\",\r\n    \"lname\":\"mahmoud\",\r\n    \"email\":\"roqia1@gmail.com\",\r\n    \"password\":\"bhkgi\",\r\n    \"age\":20,\r\n    \"gender\":\"female\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:3000/users/signup",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "33"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"21-JNtE4qWUGFo66ufcU1he/9fLxnE\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 24 Sep 2026 18:34:28 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"email already exist\"\n}"
+            },
+            {
+              "name": "signup",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": [
+                        "/D:/ER Diagram.jpg"
+                      ]
+                    },
+                    {
+                      "key": "fname",
+                      "value": "\"rora\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "lname",
+                      "value": "\"elhawary\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "gender",
+                      "value": "male",
+                      "type": "text"
+                    },
+                    {
+                      "key": "email",
+                      "value": "\"rora21132@gmail.com\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "\"53848698984\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "age",
+                      "value": "22",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": "\"xuwdh74895\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "roles",
+                      "value": "user",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/signup",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "39"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"27-tQPAUYM875Yr/jgTJ3GoBA8Gkbc\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 10 Oct 2026 02:22:28 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"sign up done successfully\"\n}"
+            },
+            {
+              "name": "signup",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": [
+                        "/D:/final projectttt D.B.sql"
+                      ]
+                    },
+                    {
+                      "key": "fname",
+                      "value": "rora",
+                      "type": "text"
+                    },
+                    {
+                      "key": "lname",
+                      "value": "elhawary",
+                      "type": "text"
+                    },
+                    {
+                      "key": "gender",
+                      "value": "male",
+                      "type": "text"
+                    },
+                    {
+                      "key": "email",
+                      "value": "rora211323@gmail.com",
+                      "type": "text"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "53848698984",
+                      "type": "text"
+                    },
+                    {
+                      "key": "age",
+                      "value": "22",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": " xuwdh74895",
+                      "type": "text"
+                    },
+                    {
+                      "key": "roles",
+                      "value": "user",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/signup",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'none'"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "1332"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 14 Oct 2026 01:15:09 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Error: i don&#39;t have a clue <br> &nbsp; &nbsp;at filefilter (file:///C:/Users/MASR%20FRANSA/Desktop/saraha%20app/src/middlewares/multer.js:23:19)<br> &nbsp; &nbsp;at wrappedFileFilter (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\multer\\index.js:134:7)<br> &nbsp; &nbsp;at Multipart.&lt;anonymous&gt; (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\multer\\lib\\make-middleware.js:344:7)<br> &nbsp; &nbsp;at Multipart.emit (node:events:514:20)<br> &nbsp; &nbsp;at HeaderParser.cb (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)<br> &nbsp; &nbsp;at HeaderParser.push (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)<br> &nbsp; &nbsp;at SBMH.ssCb [as _cb] (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)<br> &nbsp; &nbsp;at feed (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)<br> &nbsp; &nbsp;at SBMH.push (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)<br> &nbsp; &nbsp;at Multipart._write (C:\\Users\\MASR FRANSA\\Desktop\\saraha app\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)</pre>\n</body>\n</html>\n"
+            }
+          ]
+        },
+        {
+          "name": "sign in",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)\r\npm.environment.set(\"refresh_token\",response.tokens.refresh_token)\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"ro345@gmail.com\",\r\n    \"password\":\"ewojiyo;ig;ekhkgi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/signin",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "signin"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "sign in",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"roqia666@gmail.com\",\r\n    \"password\":\"ewo;ig;ekhkgi\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:3000/users/signin",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "signin"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "61"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3d-ZBRceuq/LUMPDu3ZLDj49qLUOBI\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 29 Sep 2026 00:18:03 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"fname\": \"roro\",\n  \"lname\": \"saber\",\n  \"email\": \"roqia666@gmail.com\"\n}"
+            },
+            {
+              "name": "sign in",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rora211323@gmail.com\",\r\n    \"password\":\" xuwdh7se4895\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/signin",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "signin"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "272"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"110-KgYDuhISLMO7Bt4+hdhXWua+bys\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 02:50:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"you banned for 5 mins\",\n  \"stack\": \"Error: you banned for 5 mins\\n    at signin (file:///C:/Users/MASR%20FRANSA/Desktop/saraha%20app/src/modules/usermodule/userservice.js:153:16)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+            },
+            {
+              "name": "sign in",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"password\":\" xuwdh74895\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/signin",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "signin"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "63"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3f-MWGGGl4+/KNY3dhQjQeC3e79LG4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 03:35:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"you recieved code for verification in your email \"\n}"
+            }
+          ]
+        },
+        {
+          "name": "get profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/profile",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get profile",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYzM4ZWJlMWY4NWU3YTZjYzY1NWM5NCIsImVtYWlsIjoicm8zNDVAZ21haWwuY29tIiwiaWF0IjoxNzkxMjAxNzI5LCJleHAiOjE3OTEyMDE4NDl9.hVY4aTMQQMSLE_yHl-WoXAv0tDyOYbFTTEumLUERkJQ"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:3000/users/profile",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "124"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"7c-oJKj3HFpx2kcd+uVBN+t85PsPv8\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 05 Oct 2026 12:03:56 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"your profile\": {\n    \"fname\": \"rora\",\n    \"lname\": \"el hawary\",\n    \"email\": \"ro345@gmail.com\",\n    \"phone\": \"983640069\",\n    \"gender\": \"male\",\n    \"age\": 20\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "refresh token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "refresh_token",
+                "value": "{{refresh_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{localHost}}/users/refreshtoken",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "refreshtoken"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "refresh token",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "refresh_token",
+                    "value": "{{json_web_token_0w7e}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{localHost}}/users/refreshtoken",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "refreshtoken"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "224"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"e0-ZkIqAWS4jEEe/7LzToaZtLP/4Pk\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 10 Oct 2026 01:18:11 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYzNhNjM3ZWI3MDQ0ZmQ0NDI3MzkzMiIsImVtYWlsIjoicm8zNDVAZ21haWwuY29tIiwiaWF0IjoxNzkxNTk1MDkxLCJleHAiOjE3OTE1OTUyMTF9.kw71xKLu46A70zNMS4Tlj_vTuRZ6dEq11J1rllmCNAU\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "share profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/shareProfile/6acee5c625884df37d9eda23",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "shareProfile",
+                "6acee5c625884df37d9eda23"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "share profile",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "text"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/shareProfile/6acee5c625884df37d9eda23",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "shareProfile",
+                    "6acee5c625884df37d9eda23"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "584"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"248-LpLRe71zxw78uRWy3oXaNOjPtu0\""
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 14 Oct 2026 03:27:12 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"_id\": \"6acee5c625884df37d9eda23\",\n  \"fname\": \"rora\",\n  \"lname\": \"elhawary\",\n  \"email\": \"rora211323@gmail.com\",\n  \"age\": 22,\n  \"gender\": \"male\",\n  \"roles\": \"user\",\n  \"phone\": \"53848698984\",\n  \"profileimage\": \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\93e13fce-e7ae-457a-a0e1-ef6d89ba5690__ER Diagram.jpg\",\n  \"coverImages\": [\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\6b8a6689-b53f-4898-a53b-a2ab297279d7__ER Diagram.jpg\",\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\27e5075a-8dc0-42b0-a4a7-e2d620651c80__ER Diagram.jpg\"\n  ],\n  \"id\": \"6acee5c625884df37d9eda23\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "update profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fname\":\"hawaryy\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/updateProfile",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "updateProfile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update profile",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"fname\":\"hawaryy\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/updateProfile",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "updateProfile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "841"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"349-lOlNAYLE88uz2qSDam1O+WpmaEw\""
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 14 Oct 2026 04:23:19 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"_id\": \"6acee5c625884df37d9eda23\",\n  \"fname\": \"hawaryy\",\n  \"lname\": \"elhawary\",\n  \"email\": \"rora211323@gmail.com\",\n  \"password\": \"$2b$10$cg8sWuUrCBsFeho3PHPwOec3M8LhWJKPzJMY8S3pzMqb3QHkQz5eW\",\n  \"age\": 22,\n  \"gender\": \"male\",\n  \"roles\": \"user\",\n  \"phone\": \"25de7507edd16364ca68eb5fed7f2ba2:ccc986005fbcca5495c5c2e3e3c8dca6\",\n  \"profileimage\": \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\93e13fce-e7ae-457a-a0e1-ef6d89ba5690__ER Diagram.jpg\",\n  \"coverImages\": [\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\6b8a6689-b53f-4898-a53b-a2ab297279d7__ER Diagram.jpg\",\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\27e5075a-8dc0-42b0-a4a7-e2d620651c80__ER Diagram.jpg\"\n  ],\n  \"provider\": \"system\",\n  \"isconfirmed\": false,\n  \"createdAt\": \"2026-10-14T02:15:34.445Z\",\n  \"updatedAt\": \"2026-10-14T04:23:19.131Z\",\n  \"__v\": 0,\n  \"id\": \"6acee5c625884df37d9eda23\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fname\":\"hawaryy\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/logout?flag=all",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "logout"
+              ],
+              "query": [
+                {
+                  "key": "flag",
+                  "value": "all"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "logout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"fname\":\"hawaryy\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/logout?flag=all",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "logout"
+                  ],
+                  "query": [
+                    {
+                      "key": "flag",
+                      "value": "all"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "33"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"21-Aquudj90kfg4BI2ZOUESxj4nbUo\""
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 14 Oct 2026 16:43:08 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"l\n}"
+            }
+          ]
+        },
+        {
+          "name": "confirmEmail",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"otp\":\"740311\",\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/confirmEmail",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "confirmEmail"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "confirmEmail",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"otp\":\"740311\",\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/confirmEmail",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "confirmEmail"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"12-howcZO2GSVRL1FSAZM9fSlQ6ZB0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 22 Oct 2026 23:02:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"done\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "resendOtp",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/resendOtp",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "resendOtp"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resendOtp",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/resendOtp",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "resendOtp"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "302"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"12e-SlCqX/alNBhtNwTxCug/L41P4YE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 22 Oct 2026 23:42:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"user not exist or already confirmed\",\n  \"stack\": \"Error: user not exist or already confirmed\\n    at resendOtp (file:///C:/Users/MASR%20FRANSA/Desktop/saraha%20app/src/modules/usermodule/userservice.js:98:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+            },
+            {
+              "name": "resendOtp",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/resendOtp",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "resendOtp"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "289"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"121-K7rwouhUCqVlBkIh4mTqGHZZlMI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 00:37:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"you can resend otp after585 \",\n  \"stack\": \"Error: you can resend otp after585 \\n    at resendOtp (file:///C:/Users/MASR%20FRANSA/Desktop/saraha%20app/src/modules/usermodule/userservice.js:100:13)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "forgetPASSWORD",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/forgetPassword",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "forgetPassword"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "forgetPASSWORD",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/forgetPassword",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "forgetPassword"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"12-howcZO2GSVRL1FSAZM9fSlQ6ZB0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 01:50:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"done\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Reaset pass",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"392836\",\r\n    \"newPASS\":\"yawrdfyiwtf\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/resetPassword",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "resetPassword"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Reaset pass",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"392836\",\r\n    \"newPASS\":\"yawrdfyiwtf\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/resetPassword",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "resetPassword"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"12-howcZO2GSVRL1FSAZM9fSlQ6ZB0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 02:10:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"done\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "signInWithVerification",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)\r\npm.environment.set(\"refresh_token\",response.tokens.refresh_token)\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"214397\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/users/signInWithVerification",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "users",
+                "signInWithVerification"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "signInWithVerification",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"173796\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/users/signInWithVerification",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "users",
+                    "signInWithVerification"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "553"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"229-zBICotM7nal3/DV3AwBSv9eeu1A\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 23 Oct 2026 03:37:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"tokens\": {\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZGFkNThmMjQ3ODI5YTIxOTI2ZDQ1MCIsImVtYWlsIjoicm9rYXNhYmVyNDlAZ21haWwuY29tIiwiaWF0IjoxNzkyNzI2NjUzLCJleHAiOjE3OTI3MjY3NzMsImp0aSI6IjU4NWI1YjQ4LThhMDUtNGM1OC1hNzI0LWNjYzIyODk4ZTNjMyJ9.POvuN2PB92HwbsnylVzBNZCVAUR6CgR02IutPGUnMsU\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZGFkNThmMjQ3ODI5YTIxOTI2ZDQ1MCIsImlhdCI6MTc5MjcyNjY1MywiZXhwIjoxNzkzMDcyMjUzLCJqdGkiOiI1ODViNWI0OC04YTA1LTRjNTgtYTcyNC1jY2MyMjg5OGUzYzMifQ.yQ4CfdGlvnZCn2KhUFbPGaDEFiqCyof7ZEqiIyB6Ydw\"\n  }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "item": [
+        {
+          "name": "createMessages",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"content\":\"hdjsfjlgihijgrehvh\",\r\n   \"userId\":\"6ada453661f43604fbd02997\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/messages/createMessage",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "messages",
+                "createMessage"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "createMessages",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"content\":\"hdjsfjlgihijgrehvh\",\r\n   \"userId\":\"6ada453661f43604fbd02997\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/createMessage",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "createMessage"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "39"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"27-pfTDYCea/C0tAdeioVLdJiLDHUI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 24 Oct 2026 01:29:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"message sent successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "get all messages",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"173796\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/messages/getMessages",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "messages",
+                "getMessages"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get all messages",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"173796\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/getMessages",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "getMessages"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "238"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ee-78a91lbedl9VESAv6m34WUmOkJ4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 24 Oct 2026 02:20:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"_id\": \"6adc0a0fe541ea62e2c521e5\",\n    \"content\": \"hdjsfjlgihijgrehvh\",\n    \"attachments\": [],\n    \"userId\": \"6ada453661f43604fbd02997\",\n    \"createdAt\": \"2026-10-24T01:29:51.230Z\",\n    \"updatedAt\": \"2026-10-24T01:29:51.230Z\",\n    \"__v\": 0,\n    \"id\": \"6adc0a0fe541ea62e2c521e5\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "request_Sender_Identity",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"_id\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/messages/request_Sender_Identity",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "messages",
+                "request_Sender_Identity"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "request_Sender_Identity",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"_id\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/request_Sender_Identity",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "request_Sender_Identity"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "66"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"42-Gf7tGIG1/F7bgRcWOTKvP4S9BYM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 01:57:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"sent email to sender successfully to requst identity\"\n}"
+            },
+            {
+              "name": "request_Sender_Identity",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"_id\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/request_Sender_Identity",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "request_Sender_Identity"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "693"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2b5-2utfXHnuK/twOz+QkYf8Dzt+elI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 04:13:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"_id\": \"6adad58f247829a21926d450\",\n  \"fname\": \"roqia\",\n  \"lname\": \"saber\",\n  \"email\": \"rokasaber49@gmail.com\",\n  \"age\": 22,\n  \"gender\": \"male\",\n  \"roles\": \"user\",\n  \"profileimage\": \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\8b6cca81-2b14-4f88-91d2-f55145d06b0a__ER Diagram.jpg\",\n  \"coverImages\": [\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\30d07f73-95e6-41c5-a593-3116adf46dab__ER Diagram.jpg\",\n    \"C:\\\\Users\\\\MASR FRANSA\\\\Desktop\\\\saraha app\\\\src\\\\uploads\\\\user\\\\49903f71-e1bf-4af0-aff9-b2f3d4a97366__ER Diagram.jpg\"\n  ],\n  \"isconfirmed\": false,\n  \"twoStepVerifiction\": true,\n  \"createdAt\": \"2026-10-23T03:33:35.242Z\",\n  \"updatedAt\": \"2026-10-23T03:33:35.242Z\",\n  \"__v\": 0,\n  \"id\": \"6adad58f247829a21926d450\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getAllRequests",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"173796\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/messages/getAllRequests",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "messages",
+                "getAllRequests"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getAllRequests",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rokasaber49@gmail.com\",\r\n    \"otp\":\"173796\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/getAllRequests",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "getAllRequests"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "295"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"127-e3pcMVX1zcEubqvUBwDry746gJg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 02:25:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"_id\": \"6ae155edf98880c54dd5ea12\",\n    \"content\": \"hdjsfjlgihijgrehvh\",\n    \"attachments\": [],\n    \"userId\": \"6ada453661f43604fbd02997\",\n    \"status\": \"pending\",\n    \"senderId\": \"6adad58f247829a21926d450\",\n    \"createdAt\": \"2026-10-28T01:54:53.865Z\",\n    \"updatedAt\": \"2026-10-28T01:57:33.690Z\",\n    \"__v\": 0,\n    \"id\": \"6ae155edf98880c54dd5ea12\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "accept or reject",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)\r\npm.environment.set(\"refresh_token\",response.tokens.refresh_token)\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"_id\":\"6ae155edf98880c54dd5ea12\",\r\n    \"status\":\"accepted\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/messages/acceptORreject",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "messages",
+                "acceptORreject"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "accept or reject",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"_id\":\"6ae155edf98880c54dd5ea12\",\r\n    \"status\":\"accepted\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/messages/acceptORreject",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "messages",
+                    "acceptORreject"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "6"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6-6pJ1DoQctQ7RSHYXHh78H/jCH8Y\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 04:10:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "\"done\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "conversation",
+      "item": [
+        {
+          "name": "create conversation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"messageId\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/conversations/createConversation",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "conversations",
+                "createConversation"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "create conversation",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"messageId\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/conversations/createConversation",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "conversations",
+                    "createConversation"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "326"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"146-cVzaGP5sGpvxRQjyPv1f2NIchTw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 23:07:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"not accepted to create conversation\",\n  \"stack\": \"Error: not accepted to create conversation\\n    at createConversation (file:///C:/Users/MASR%20FRANSA/Desktop/saraha%20app/src/modules/conversationModel/conversationservice.js:13:15)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+            },
+            {
+              "name": "create conversation",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"messageId\":\"6ae155edf98880c54dd5ea12\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/conversations/createConversation",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "conversations",
+                    "createConversation"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "316"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"13c-BvXZsmcdMzSpTTERKOoLt966lVo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 23:07:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"created conversation successfully\",\n  \"conv\": {\n    \"user1\": \"6adad58f247829a21926d450\",\n    \"user2\": \"6ada453661f43604fbd02997\",\n    \"messageId\": \"6ae155edf98880c54dd5ea12\",\n    \"_id\": \"6ae28047571f6de3fedcc840\",\n    \"createdAt\": \"2026-10-28T23:07:51.225Z\",\n    \"updatedAt\": \"2026-10-28T23:07:51.225Z\",\n    \"__v\": 0,\n    \"id\": \"6ae28047571f6de3fedcc840\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "send message",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)\r\npm.environment.set(\"refresh_token\",response.tokens.refresh_token)\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\":\"wigeufydkfeiao\",\r\n    \"_id\":\"6ae28047571f6de3fedcc840\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/conversations/sendMessage",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "conversations",
+                "sendMessage"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "send message",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"content\":\"wigeufydkfeiao\",\r\n    \"_id\":\"6ae28047571f6de3fedcc840\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/conversations/sendMessage",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "conversations",
+                    "sendMessage"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "362"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"16a-2bOhAO3ZoR1AwdwFBlnGyPVh7nM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 00:52:52 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": {\n    \"content\": \"wigeufydkfeiao\",\n    \"attachments\": [],\n    \"userId\": \"6ada453661f43604fbd02997\",\n    \"conversation\": false,\n    \"status\": \"new\",\n    \"conversationId\": \"6ae28047571f6de3fedcc840\",\n    \"senderId\": \"6adad58f247829a21926d450\",\n    \"_id\": \"6ae298e446ba29b34f2d273a\",\n    \"createdAt\": \"2026-10-29T00:52:52.613Z\",\n    \"updatedAt\": \"2026-10-29T00:52:52.613Z\",\n    \"__v\": 0,\n    \"id\": \"6ae298e446ba29b34f2d273a\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get conversation messages",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "let response=pm.response.json()\r\nconsole.log(response)\r\npm.environment.set(\"access_token\",response.tokens.access_token)\r\npm.environment.set(\"refresh_token\",response.tokens.refresh_token)\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\":\"wigeufydkfeiao\",\r\n    \"_id\":\"6ae28047571f6de3fedcc840\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localHost}}/conversations/getConversationMessages/6ae28047571f6de3fedcc840",
+              "host": [
+                "{{localHost}}"
+              ],
+              "path": [
+                "conversations",
+                "getConversationMessages",
+                "6ae28047571f6de3fedcc840"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get conversation messages",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"content\":\"wigeufydkfeiao\",\r\n    \"_id\":\"6ae28047571f6de3fedcc840\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{localHost}}/conversations/getConversationMessages/6ae28047571f6de3fedcc840",
+                  "host": [
+                    "{{localHost}}"
+                  ],
+                  "path": [
+                    "conversations",
+                    "getConversationMessages",
+                    "6ae28047571f6de3fedcc840"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "72"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"48-+7Wg4wbeup6t8onQJCyk6q3tnVk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 15:21:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Conversation messages retrieved successfully\",\n  \"messages\": []\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_09xn",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0w7e",
+      "secret": true
+    }
+  ]
+}
