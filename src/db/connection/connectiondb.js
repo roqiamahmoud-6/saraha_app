@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import { urlDb } from "../../../env/config.service.js";
 
 export const connectiondb=async()=>{
     try{
-         await  mongoose.connect("mongodb://localhost:27017/sara7a_app")
+         await  mongoose.connect(urlDb)
     console.log("db connected successfully👌")
     }catch(err){
         console.log(err)

@@ -1,13 +1,15 @@
 import jwt from "jsonwebtoken"
-import { find, findbyid } from "./../../service/db.service.js"
+import { find, findall, findbyid } from "./../../service/db.service.js"
 import { usermodel } from "../../models/usermodel.js"
 import { getValue } from "../../service/redis.servise.js"
+import { secret_key } from "../../../../env/config.service.js"
+import { messageModel } from "../../models/messagemodel.js"
 export const authntication =async (req,res,next)=>{
    const {authorization}=req.headers
    if(!authorization){
     return res.status(401).json ({message:"token not exist"})
    }
-   const decoded = jwt.verify(authorization,"roro2222")
+   const decoded = jwt.verify(authorization,secret_key)
    if (!decoded?.id){return res.status(404).json({message:"invalid token"})}
    const user = await findbyid({
     model:usermodel,
@@ -23,8 +25,8 @@ export const authntication =async (req,res,next)=>{
     })){
        throw new Error("token expire from your device please login again")
     }
-   req.user=user
-   req.decoded=decoded
-   next()
-
-}
+    req.user=user
+    req.decoded=decoded
+    next()
+    
+  }

@@ -165,3 +165,112 @@ export const twoStepTemplate = (otp) => {
     </html>
   `;
 };
+
+export const requestSenderIdentityTemplate = ( messageId ) => {
+  return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sender Identity Request</title>
+    </head>
+
+    <body style="margin:0; padding:0; background-color:#f4f4f7; font-family:Arial,sans-serif; color:#333;">
+      <div style="max-width:600px; margin:30px auto; background-color:#ffffff; border-radius:12px; overflow:hidden;">
+
+        <div style="background-color:#6c63ff; padding:25px; text-align:center; color:#ffffff;">
+          <h1 style="margin:0;">Saraha</h1>
+          <p>Sender Identity Request</p>
+        </div>
+
+        <div style="padding:30px;">
+          <h2>Hello!</h2>
+
+          <p style="font-size:16px; line-height:1.7;">
+            Someone has requested to know the identity of the sender of one of your messages.
+          </p>
+
+          <div style="background-color:#f8f8fc; padding:15px; border-radius:8px; margin:20px 0;">
+            <p><strong>Message ID:</strong> ${messageId}</p>
+            <p><strong>Status:</strong> Pending</p>
+          </div>
+
+          <p style="font-size:15px; line-height:1.7;">
+            Please log in to your Saraha account to accept or reject this request.
+            The sender's identity will only be disclosed if you accept.
+          </p>
+
+          <p style="font-size:14px; color:#777;">
+            If you did not expect this notification, you can ignore this email.
+          </p>
+        </div>
+
+        <div style="background-color:#f4f4f7; padding:18px; text-align:center; font-size:12px; color:#888;">
+          &copy; ${new Date().getFullYear()} Saraha. All rights reserved.
+        </div>
+
+      </div>
+    </body>
+    </html>
+  `;
+
+};
+
+export const requestAcceptedTemplate = (_id) => {
+  return `
+    <!DOCTYPE html>
+    <html>
+      <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+        <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 25px; border-radius: 10px;">
+          <h2 style="color: #28a745;">Request Accepted Successfully!</h2>
+
+          <p>Your request to reveal the sender's identity has been accepted.</p>
+
+          <p>
+            <strong>Message ID:</strong> ${_id}
+          </p>
+
+          <p>You can now return to the application and try viewing the sender's identity again.</p>
+
+          <p>Thank you for using our application!</p>
+
+          <hr />
+
+          <p style="color: #777; font-size: 12px;">
+            This is an automated email. Please do not reply to this message.
+          </p>
+        </div>
+      </body>
+    </html>
+  `;
+};
+
+export const requestRejectedTemplate = (_id) => {
+  return `
+    <!DOCTYPE html>
+    <html>
+      <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+        <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 25px; border-radius: 10px;">
+          <h2 style="color: #dc3545;">Request Rejected</h2>
+
+          <p>Unfortunately, your request to reveal the sender's identity has been rejected.</p>
+
+          <p>
+            <strong>Message ID:</strong> ${_id}
+          </p>
+
+          <p>The sender has chosen not to reveal their identity, so their identity will remain hidden.</p>
+
+          <p>Thank you for understanding.</p>
+
+          <hr />
+
+          <p style="color: #777; font-size: 12px;">
+            This is an automated email. Please do not reply to this message.
+          </p>
+        </div>
+      </body>
+    </html>
+  `;
+};

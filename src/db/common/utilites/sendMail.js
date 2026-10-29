@@ -1,14 +1,13 @@
 import { randomInt } from "node:crypto";
 import nodemailer from "nodemailer";
-import { otpTemplate } from "./otpTemplete.js";
+import { passwordEmail } from "../../../../env/config.service.js";
 
 export const sendEmail =async({to,subject,html})=>{
     const transporter = nodemailer.createTransport({
         service:"gmail",
         auth:{
             user:"rokasaber94@gmail.com",
-            pass:"qhwmjwejrpgvnpkl"
-            // qhwm jwej rpgv npkl
+            pass:passwordEmail
         }
     })
     const info =await transporter.sendMail({

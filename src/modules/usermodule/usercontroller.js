@@ -7,7 +7,7 @@ import { refreshTokenSchema, shareprofileSchema, signupschema } from "./user.val
 import { multerLocal } from "../../db/common/middlewares/multer.js";
 
 
-export const userRouter=Router()
+export const userRouter=Router({strict:true})
 
 
 userRouter.post ("/signup" ,multerLocal({custompath:"user",ext:["image/jpeg"]}).fields([ { name: "image", maxCount: 1 },{ name: "images", maxCount: 2 }]),validate(signupschema),signup)

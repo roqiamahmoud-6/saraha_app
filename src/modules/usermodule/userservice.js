@@ -9,6 +9,8 @@ import multer from 'multer';
 import { deleteKey, getValue, incr, setValue, ttl } from "../../db/service/redis.servise.js";
 import { generateOtp, sendEmail } from "../../db/common/utilites/sendMail.js";
 import { otpTemplate, resetPasswordTemplate, twoStepTemplate } from "../../db/common/utilites/otpTemplete.js";
+import { eventEmitter } from "../../db/common/utilites/event .js";
+import { clientId, secret_key, secret_key_refresh } from "../../../env/config.service.js";
 
 
 export const signup=async (req,res,next)=>{
@@ -32,14 +34,15 @@ export const signup=async (req,res,next)=>{
         value:1,
         ex:60*6
       })
-      await sendEmail({
-        to:email,
-        subject:"confirm Email",
-        html:otpTemplate(otp)
+      eventEmitter.emit("confirm email",async()=>{
+         await sendEmail({
+           to:email,
+           subject:"confirm Email",
+           html:otpTemplate(otp)
+         })
       })
    const encryptedphone=Encrypt(phone)
    const hashhpass=await Hash(password) 
-   // console.log(req.files)
    const paths=[]
    for(const file of req.files.images){
       paths.push(file.path)
@@ -164,19 +167,21 @@ export const signin=async (req,res,next)=>{
             value:otpValue,
             ex:60*5
          })
-          await sendEmail({
-        to:email,
-        subject:"2-step-verifiction",
-        html:twoStepTemplate(otp)
-      })
+         eventEmitter.emit("sign in with verifiction",async()=>{
+            await sendEmail({
+               to:email,
+               subject:"2-step-verifiction",
+               html:twoStepTemplate(otp)
+            })
+         })
       return res.status(200).json({message:"you recieved code for verification in your email "})
       }
 
-      const access_token =jwt.sign({id:user.id,email:user.email},"roro2222",{
+      const access_token =jwt.sign({id:user.id,email:user.email},secret_key,{
          expiresIn:120,
          jwtid:tokenId
       })
-      const refresh_token =jwt.sign({id:user.id},"roro4444",{
+      const refresh_token =jwt.sign({id:user.id},secret_key_refresh,{
          expiresIn:"4d",
          jwtid:tokenId
       })
@@ -206,11 +211,11 @@ export const signInWithVerification=async (req,res,next)=>{
       throw new Error("invalid otp")
     }
     await deleteKey({key:`otpforVerifiction:${email}`})
-    const access_token =jwt.sign({id:user.id,email:user.email},"roro2222",{
+    const access_token =jwt.sign({id:user.id,email:user.email},secret_key,{
          expiresIn:120,
          jwtid:tokenId
       })
-      const refresh_token =jwt.sign({id:user.id},"roro4444",{
+      const refresh_token =jwt.sign({id:user.id},secret_key_refresh,{
          expiresIn:"4d",
          jwtid:tokenId
       })
@@ -245,7 +250,7 @@ export const signupwithgmail=async (req,res,next)=>{
       async function verify() {
          const decoded = await client.verifyIdToken({
             idToken,
-            audience:  "581869907690-0ih84n2ccr6n2v6964au5rii9tm24u1d.apps.googleusercontent.com" ,  
+            audience:clientId ,  
          });
          const { given_name ,  family_name , email ,picture ,email_verified } = decoded.getPayload();
          let user =await usermodel.findOne({email:email.toLowerCase()})
@@ -259,10 +264,10 @@ export const signupwithgmail=async (req,res,next)=>{
                provider:"google"
             })
          }
-          const access_token =jwt.sign({id:user.id,email:user.email},"roro2222",{
+          const access_token =jwt.sign({id:user.id,email:user.email},secret_key,{
          expiresIn:120
       })
-      const refresh_token =jwt.sign({id:user.id},"roro4444",{
+      const refresh_token =jwt.sign({id:user.id},secret_key_refresh,{
          expiresIn:"4d"
       })
      res.status(200).json({tokens:{access_token , refresh_token}})
@@ -279,7 +284,7 @@ export const Refresh_token= async(req,res,next)=>{
   if(!refresh_token){
       return res.status(401).json ({message:"token not exist"})
      }
-     const decoded = jwt.verify(refresh_token,"roro4444")
+     const decoded = jwt.verify(refresh_token,secret_key_refresh)
      if (!decoded?.id){return res.status(404).json({message:"invalid token"})}
      const user = await findbyid({
       model:usermodel,
@@ -287,7 +292,7 @@ export const Refresh_token= async(req,res,next)=>{
      })
       if(!user){ return res.status(404).json ({message:"user not exist"})}
        
-      const access_token =jwt.sign({id:user.id,email:user.email},"roro2222",{
+      const access_token =jwt.sign({id:user.id,email:user.email},secret_key,{
          expiresIn:120
       })
       res.status(200).json({access_token})
@@ -399,10 +404,12 @@ export const forgetPassword= async(req,res,next)=>{
         value:hashOtp,
         ex:60*10
       })
-      await sendEmail({
-        to:email,
-        subject:"Forget password",
-        html:resetPasswordTemplate(otp)
+      eventEmitter.emit("reset password",async()=>{
+         await sendEmail({
+           to:email,
+           subject:"Forget password",
+           html:resetPasswordTemplate(otp)
+         })
       })
       await incr({key:`otpforgetPass:max:${email}`})
     res.status(200).json({message:"done"})
